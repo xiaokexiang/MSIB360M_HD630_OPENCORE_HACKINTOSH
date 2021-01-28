@@ -2,16 +2,15 @@
 
 - 原有的EFI不支持HDMI接口的输出，更新后EFI已支持
 
-![](https://image.leejay.top/FlBy7icgcGKN0hDPVYTg11_dGCVx)
-![](https://image.leejay.top/Fvsp2zuFv6fGJ-CdmvjK8L3XLdkm)
-![](https://image.leejay.top/FhZo3wuUL63JvvIdeypRVC1-bBTZ)
-![](https://image.leejay.top/FvWrL1kRMkWWAgP5RMZZ46lPu6tY)
-![使用hdmi & 开启hidpi](https://image.leejay.top/FpwSO6ZntkC7fS9BwAoLnXbGPBTH)
-> 以上操作基于`hackintoolv3.4.7`
+    <a href="./HDMI.md">点此查看HDMI教程</a>
+
+- 解决HDMI接口休眠后唤醒有声音无画面问题
+
+    添加启动参数`igfxonln=1`
 
 - 关闭OpenCore debug模式（具体表现在每次启动都会生成log日志）
 
-![](https://image.leejay.top/Fg3GZiGyTDvSZV1sx3qOdfFsE4rp)
+    ![](https://image.leejay.top/Fg3GZiGyTDvSZV1sx3qOdfFsE4rp)
 
 ### 配置
 ![](https://image.leejay.top/FhdyQFJ24FcxS65y1qDAScCB51Kp)
@@ -34,6 +33,20 @@
 - Macos 10.15.7 Catalina
 
 ---
+
+### TODO
+
+- ~~DP/HDMI/DVI输出~~
+- ~~CPU型号与核显型号（显存正常）正确识别~~
+- ~~USB(3.0/2.0)识别正常~~
+- ~~声卡驱动正常（HDMI下也正常）~~
+- ~~睡眠与唤醒功能正常（HDMI也没问题）~~
+- ~~imessage功能与三码正常~~
+- OpenCore引导式有概率出现`StartImage failed - Aborted`问题
+- 使用4k显示器，去除HIDPI功能（会导致掉帧的情况）
+- 使用免驱独显，核显加速功能
+- BCMP9436CD免驱网卡
+- 更换SATA为m.2固态（暂定铠侠RC10 500GB）
 
 ### 相关资源链接
 
@@ -60,4 +73,8 @@
 - [8/9代IntelCpu核显开启HDMI输出](https://blog.daliansky.net/Tutorial-Using-Hackintool-to-open-the-correct-pose-of-the-8th-generation-core-display-HDMI-or-DVI-output.html)
 
 - [B360M核显输出HDMI](https://blog.csdn.net/he37176427/article/details/89670213)
+
+- [黑苹果启动参数问题](https://heipg.cn/drivers/whatevergreen-139.html)
+
+- [黑苹果HDMI接口唤醒黑屏问题](http://bbs.pcbeta.com/viewthread-1850729-1-1.html)
 ---
